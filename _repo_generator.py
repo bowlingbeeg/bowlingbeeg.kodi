@@ -304,12 +304,15 @@ class Generator:
 
                 updated = False
                 addon_entry = addons_root.find(addon_xpath.format(id))
-                if addon_entry is not None and addon_entry.get('version') != version:
-                    index = addons_root.findall('addon').index(addon_entry)
-                    addons_root.remove(addon_entry)
-                    addons_root.insert(index, addon_root)
-                    updated = True
-                    changed = True
+                if addon_entry is not None:
+                    if addon_entry.get('version') != version:
+                        index = addons_root.findall('addon').index(addon_entry)
+                        addons_root.remove(addon_entry)
+                        addons_root.insert(index, addon_root)
+                        updated = True
+                        changed = True
+                    else:
+                        print("Version {} already exists in addon.xml".format(color_text(version, 'yellow')))
                 elif addon_entry is None:
                     addons_root.append(addon_root)
                     updated = True
