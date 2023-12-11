@@ -307,8 +307,10 @@ class Generator:
                 if addon_entry is not None:
                     if addon_entry.get('version') != version:
                         index = addons_root.findall('addon').index(addon_entry)
-                        addons_root.remove(addon_entry)
+                        #addons_root.remove(addon_entry)
+                        addon_root.tail = "\n    "
                         addons_root.insert(index, addon_root)
+                        ElementTree.indent(addon_xml, space='    ', level=1)
                         updated = True
                         changed = True
                     else:
