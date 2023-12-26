@@ -19,6 +19,38 @@
             </assets>
         </extension>
     </addon>
+    <addon id="script.zidooplexmod" name="ZidooPlexMod" version="0.3.3" provider-name="bowlingbeeg">
+        <requires>
+            <import addon="xbmc.python" version="3.0.0" />
+            <import addon="script.module.requests" version="2.27.1+matrix.1" />
+            <import addon="script.module.six" version="1.15.0+matrix.1" />
+            <import addon="script.module.kodi-six" version="0.1.3.1" />
+        </requires>
+        <extension point="xbmc.python.script" library="default.py">
+            <provides>video</provides>
+        </extension>
+        <extension point="xbmc.python.pluginsource" library="plugin.py">
+            <provides>executable</provides>
+        </extension>
+        <extension point="xbmc.service" library="service.py" />
+        <extension point="xbmc.addon.metadata">
+            <summary lang="en_GB">ZidooPlexMod for Kodi</summary>
+            <description lang="en_GB">Unofficial Plex for Kodi add-on</description>
+            <license>GPL-2.0-only</license>
+            <forum>http://forum.zidoo.tv/index.php?threads/plextozidoo-an-external-player-for-plex-using-native-zidoo-player.94714/</forum>
+            <website>https://www.plex.tv</website>
+            <source>https://github.com/bowlingbeeg/plex-for-kodi</source>
+            <platform>all</platform>
+            <news>
+            Support zidoo player for Kodi 20+
+            Support custom library layout via xml file
+        </news>
+            <assets>
+                <icon>icon.png</icon>
+                <fanart>fanart.jpg</fanart>
+            </assets>
+        </extension>
+    </addon>
     <addon id="script.zidooplexmod" name="ZidooPlexMod" version="0.3.2" provider-name="bowlingbeeg">
         <requires>
             <import addon="xbmc.python" version="3.0.0" />
