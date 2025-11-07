@@ -19,7 +19,7 @@
             </assets>
         </extension>
     </addon>
-    <addon id="script.zidooplexmod" name="ZidooPlexMod" version="1.0.5d_zidoo" provider-name="bowlingbeeg">
+    <addon id="script.zidooplexmod" name="ZidooPlexMod" version="1.0.5d_zidoo_1" provider-name="bowlingbeeg">
         <requires>
             <import addon="xbmc.python" version="3.0.0" />
             <import addon="script.module.requests" version="2.27.1+matrix.1" />
